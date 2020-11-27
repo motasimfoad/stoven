@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Stoven - Awesome reciepe app!!
+        </title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        
+        <div class="logo">
+            <img src="./Assets/Images/logo.png">
+        </div>
+        <h1>
+        </h1>
+        <div class="carosal"></div>
+        <div class="form">
+            <div class="form_basics"></div>
+            <div class="checkbox"></div>
+        </div>
+        <h1 style="text-align: center;">Dishes</h1>
+        <div id="accordion">
+            <h3>Chinese Dishes</h3>
+            <div>
+                <p>
+                    Chinese cuisine is an important part of Chinese culture, which includes cuisine originating from the diverse regions of China, as well as from Overseas Chinese who have settled in other parts of the world.
+                </p>
+                    <ul>
+                    <li>Dim Sums</li>
+                    <li>Hot &amp; Sour Soup</li>
+                    <li>Spring Rolls</li>
+                    </ul>
+            </div>
+            <h3>Indian Dishes</h3>
+            <div>
+                <p>
+                    Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent. Given the diversity in soil, climate, culture, ethnic groups, and occupations, these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits.
+                </p>
+                    <ul>
+                    <li>Aloo Tikki</li>
+                    <li>Chole Bhature</li>
+                    <li>Amritsari Kulcha</li>
+                    </ul>
+            </div>
+            <h3>Italian Dishes</h3>
+            <div>
+                <p>
+                    Italian cuisine is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula since antiquity, and later spread around the world together with waves of Italian diaspora.
+                </p>
+                    <ul>
+                    <li>Panzenella</li>
+                    <li>Bruschetta</li>
+                    <li>Focaccia Bread</li>
+                    </ul>
+            </div>
+<script>
+$( function() {
+    $( "#accordion").accordion();
+} );
+$( ".selector" ).accordion({
+    active: 2
+});
+    var active = $( ".selector" ).accordion( "option", "active" );
+    $( ".selector" ).accordion( "option", "active", 2 );
+</script>
+        </div>
+        <footer>
+            &copf; Stoven
+        </footer>
+    </body>
+</html>
