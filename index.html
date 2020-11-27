@@ -4,26 +4,52 @@
         <title>
             Stoven - Awesome reciepe app!!
         </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        
-        <div class="logo">
-            <img src="./Assets/Images/logo.png">
+        <div>
+            <img class="logo" src="./Assets/Images/logo.png">
         </div>
         <h1>
             Hello
         </h1>
         <div class="carosal"></div>
         <div class="form">
-            <div class="form_basics"></div>
+            <div class="form_basics">
+                <h2>
+                    Let Us Cook For You!!
+                </h2>
+                <form method="GET" action="action.php">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+                    <input type="text" id="datepicker" name="date" required>
+                    <input type="submit" placeholder="Submit">
+                    <script>
+                        $( function() {
+                        $( "#datepicker" ).datepicker();
+                        $( "#anim" ).on( "change", function() {
+                        $( "#datepicker" ).datepicker( "option", "showAnim", "bounce" );
+                        });
+                    } );
+                    </script>
+                </form>
+            </div>
             <div class="checkbox"></div>
         </div>
         <div class="accordian"></div>
+        <br>
+
         <footer>
-            &copf; Stoven
+            &copf; <span id="year"></span> Stoven
+            <script>
+                $("#year").html(new Date().getFullYear());
+            </script>
         </footer>
     </body>
 </html>
