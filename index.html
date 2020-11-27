@@ -16,6 +16,38 @@
         <div>
             <img class="logo" src="./Assets/Images/logo.png">
         </div>
+       
+ 
+     
+      <div>  
+       
+           <div id="dialog" title="Dialog">
+  <p style="font-size: 1.5em">This website can help you with cooking...you can get a lot of help from this website</p>
+</div>
+     <button id="opener">Open Dialog</button>
+      <script>
+  $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 900
+      },
+      hide: {
+        effect: "explode",
+        duration: 900
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  </script>        
+    
+        </div>  
+        
+        
         <h1>
             Hello
         </h1>
