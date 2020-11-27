@@ -11,6 +11,16 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <link rel="stylesheet" href="./style.css">
+        <script>
+            $( function() {
+                $( "#accordion").accordion();
+            } );
+            $( ".selector" ).accordion({
+                active: 2
+            });
+                var active = $( ".selector" ).accordion( "option", "active" );
+                $( ".selector" ).accordion( "option", "active", 2 );
+            </script>
     </head>
     <body>
         <div>
@@ -19,7 +29,16 @@
         <h1>
             Hello
         </h1>
-        <div class="carosal"></div>
+        <div class="carosal">
+            <div id="dialog" title="Dialog">
+                <p style="font-size: 1.5em">This website can help you with cooking...you can get a lot of help from this website</p>
+            </div>
+            <script>
+                $( function() {
+                  $( "#dialog" ).dialog();
+                } );
+            </script>     
+        </div>
         <div class="form">
             <div class="form_basics">
                 <h2>
@@ -40,9 +59,62 @@
                     </script>
                 </form>
             </div>
-            <div class="checkbox"></div>
+            <div class="checkbox">
+                <fieldset>
+                   <legend>Types of Cuisine: </legend>
+                   <label for="checkbox-1">CHINESE</label>
+                   <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                   <label for="checkbox-2">INDIAN</label>
+                   <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                   <label for="checkbox-3">ITALIAN</label>
+                   <input type="checkbox" name="checkbox-3" id="checkbox-3">
+               </fieldset>
+                   
+                   <script>
+                   $( function() {
+                   $( "input" ).checkboxradio();
+                   } );
+                   </script>
+           </div>
         </div>
-        <div class="accordian"></div>
+        <h2 style="text-align: center;">Dishes</h2>
+        <div id="accordion">
+            <h3>Chinese Dishes</h3>
+            <div>
+                <p>
+                    Chinese cuisine is an important part of Chinese culture, which includes cuisine originating from the diverse regions of China, as well as from Overseas Chinese who have settled in other parts of the world.
+                </p>
+                    <ul>
+                    <li>Dim Sums</li>
+                    <li>Hot &amp; Sour Soup</li>
+                    <li>Spring Rolls</li>
+                    </ul>
+            </div>
+            <h3>Indian Dishes</h3>
+            <div>
+                <p>
+                    Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent. Given the diversity in soil, climate, culture, ethnic groups, and occupations, these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits.
+                </p>
+                    <ul>
+                    <li>Aloo Tikki</li>
+                    <li>Chole Bhature</li>
+                    <li>Amritsari Kulcha</li>
+                    </ul>
+            </div>
+            <h3>Italian Dishes</h3>
+            <div>
+                <p>
+                    Italian cuisine is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula since antiquity, and later spread around the world together with waves of Italian diaspora.
+                </p>
+                    <ul>
+                    <li>Panzenella</li>
+                    <li>Bruschetta</li>
+                    <li>Focaccia Bread</li>
+                    </ul>
+                </div>
+            
+        </div>
+            </div>
         <br>
 
         <footer>
