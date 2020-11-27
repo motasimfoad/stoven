@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Stoven - Awesome reciepe app!!
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div>
+            <img class="logo" src="./Assets/Images/logo.png">
+        </div>
+        <h1>
+            The Story Of a Kitchen
+        </h1>
+        <div>  
+       
+                <div id="dialog" title="Dialog">
+       <p style="font-size: 1.5em">This website can help you with cooking...you can get a lot of help from this website</p>
+     </div>
+          <button id="opener">Open Dialog</button>
+           <script>
+       $( function() {
+         $( "#dialog" ).dialog({
+           autoOpen: false,
+           show: {
+             effect: "blind",
+             duration: 900
+           },
+           hide: {
+             effect: "explode",
+             duration: 900
+           }
+         });
+      
+         $( "#opener" ).on( "click", function() {
+           $( "#dialog" ).dialog( "open" );
+         });
+       } );
+       </script>        
+         
+             </div>  
+       
+        <br>
+
+        <footer>
+            &copf; <span id="year"></span> Stoven
+            <script>
+                $("#year").html(new Date().getFullYear());
+            </script>
+        </footer>
+    </body>
+</html>
