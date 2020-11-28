@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sajaad khan(Stoven - Awesome reciepe app!!)
+    </title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .logo img {
+            width: 150px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="./Assets/Images/logo.png">
+    </div>
+    <header>
+        <h1>Dialog box</h1>
+    </header>
+    <h3>click "open Dialog" button to open the dialog box manually.</h3>
+
+    <div id="dialog" title="Stoven">
+        <p style="font-size: 1.5em">This website can help you with cooking...you can get a lot of help from this website.</p>
+    </div>
+    <button id="opener">Open Dialog</button>
+    <script>
+        $(function() {
+            $("#dialog").dialog({
+                autoOpen: true,
+                show: {
+                    effect: "explode",
+                    duration: 1500
+                },
+                hide: {
+                    effect: "clip",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function() {
+                $("#dialog").dialog("open");
+            });
+        });
+
+    </script>
+
+
+    <footer>
+        &copy; Stoven
+    </footer>
+</body>
+
+</html>
